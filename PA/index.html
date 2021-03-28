@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gmail and Phone Authentication</title>
+
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+	<script>
+	  var config = {
+	    apiKey: "AIzaSyA1rRG77hpoYS3i6moo900KD8GR1wQ5Kh8",
+	    authDomain: "okcredit-7535e.firebaseapp.com",
+	    databaseURL: "https://okcredit-7535e.firebaseio.com",
+	    projectId: "okcredit-7535e",
+	    storageBucket: "okcredit-7535e.appspot.com",
+	    messagingSenderId: "870984863712"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+  <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+</head>
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDKfT2oPQz8QukBGn6dN7-g_BG8MFuZ9-w",
+    authDomain: "shrc-gadag1.firebaseapp.com",
+    projectId: "shrc-gadag1",
+    storageBucket: "shrc-gadag1.appspot.com",
+    messagingSenderId: "750426177051",
+    appId: "1:750426177051:web:5a8036313e2b565ec502be",
+    measurementId: "G-JCE7CRY2W2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    <div id="container">
+      <h3>Authentication via Gmail/Phone number</h3>
+      <div id="loading">Loading...</div>
+      <div id="loaded" class="hidden">
+        <div id="main">
+          <div id="user-signed-in" class="hidden">
+            <div id="user-info">
+              <div id="phone"></div>
+              <div class="clearfix"></div>
+            </div>
+            <p>
+              <button id="sign-out">Sign Out</button>
+            </p>
+          </div>
+          <div id="user-signed-out" class="hidden">
+            <div id="firebaseui-spa">
+              <h3>App:</h3>
+              <div id="firebaseui-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
